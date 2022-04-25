@@ -1,7 +1,10 @@
 <template>
-  <h2>This is home</h2>
-  <div class="card__wrapper" v-for="item in items" :key="item.id">
-    <TheCard :name="`${item.lvl} lvl`" :title="item.title" />
+  <div class="md-body">
+    <div class="card__wrapper" v-for="item in items" :key="item.id">
+      <TheCard :name="`${item.lvl} lvl`" :title="item.title">
+        {{ item.desc }}
+      </TheCard>
+    </div>
   </div>
 </template>
 
