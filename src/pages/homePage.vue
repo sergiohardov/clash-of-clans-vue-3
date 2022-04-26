@@ -9,27 +9,13 @@
 </template>
 
 <script>
+import items from "@/seeders/items.js";
 import TheCard from "@/components/UI/TheCard";
 export default {
   components: { TheCard },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          title: "Archer",
-          desc: "archer archer archer",
-          img: require("@/assets/img/archer.png"),
-          lvl: 4,
-        },
-        {
-          id: 2,
-          title: "Wizard",
-          desc: "Wizard Wizard arcWizarder",
-          img: require("@/assets/img/wizard.png"),
-          lvl: 5,
-        },
-      ],
+      items: items,
     };
   },
 };
