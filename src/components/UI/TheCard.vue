@@ -7,6 +7,14 @@
     <span class="card-title">{{ title }}</span>
     <div class="card-body">
       <slot></slot>
+
+      <router-link
+        class="link"
+        style="display: block; margin-top: 10px"
+        v-if="link"
+        :to="link"
+        >See More</router-link
+      >
     </div>
   </div>
 </template>
@@ -23,6 +31,9 @@ export default {
       required: true,
     },
     imgUrl: {
+      type: String,
+    },
+    link: {
       type: String,
     },
   },
